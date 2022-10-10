@@ -21,4 +21,6 @@ public class PerfArtistService {
     public PerfArtist saveArtist(PerfArtist artist) {
         return this.perfArtistRepository.save(artist);
     }
+
+    public PerfArtist getArtistById(String id){ return this.perfArtistRepository.findById(id).orElse(null); }
 }
