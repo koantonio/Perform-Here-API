@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("perfArtists")
 public class PerfArtistController {
@@ -27,7 +27,7 @@ public class PerfArtistController {
         return this.perfArtistService.saveArtist(artist);
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @GetMapping("{id}")
     public PerfArtist getArtistById(@PathVariable("id") String id){ return this.perfArtistService.getArtistById(id); }
 }
