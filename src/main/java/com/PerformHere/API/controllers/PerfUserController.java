@@ -23,7 +23,7 @@ public class PerfUserController {
    }
 
    @PostMapping("add")
-    public PerfUser addUser(@RequestBody PerfUser perfUser) {
+   public PerfUser addUser(@RequestBody PerfUser perfUser) {
        return this.perfUserService.saveUser(perfUser);
    }
 }
