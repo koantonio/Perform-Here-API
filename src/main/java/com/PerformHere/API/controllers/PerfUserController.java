@@ -17,7 +17,7 @@ public class PerfUserController {
        this.perfUserService = perfUserService;
    }
 
-   @GetMapping("getAll")
+   @GetMapping("all")
    public List<PerfUser> getAllUsers() {
        return this.perfUserService.getAllUsers();
    }

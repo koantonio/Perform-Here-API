@@ -17,7 +17,7 @@ public class PerfArtistController {
         this.perfArtistService = perfArtistService;
     }
 
-    @GetMapping("getAll")
+    @GetMapping("all")
     public List<PerfArtist> getAllArtists() {
         return this.perfArtistService.getAllArtists();
     }
@@ -26,8 +26,7 @@ public class PerfArtistController {
     public PerfArtist saveArtist(@RequestBody PerfArtist artist) {
         return this.perfArtistService.saveArtist(artist);
     }
-
-    @CrossOrigin(origins = "*")
+    
     @GetMapping("{id}")
     public PerfArtist getArtistById(@PathVariable("id") String id){ return this.perfArtistService.getArtistById(id); }
 }
