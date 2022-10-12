@@ -12,17 +12,19 @@ public class Votes {
     Integer id;
     String userId;
     String artistName;
-    String location;
+    String state;
+    String city;
 
     public Votes() {
 
     }
 
-    public Votes(Integer id, String userId, String artistName, String location) {
+    public Votes(Integer id, String userId, String artistName, String state, String city) {
         this.id = id;
         this.userId = userId;
         this.artistName = artistName;
-        this.location = location;
+        this.state = state;
+        this.city = city;
     }
 
     public void setId(Integer id) {
@@ -37,8 +39,12 @@ public class Votes {
         this.artistName = artistName;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 
     public Integer getId() {
@@ -53,7 +59,12 @@ public class Votes {
         return artistName;
     }
 
-    public String getLocation() {
-        return location;
+    public String getState() {
+        return state;
     }
+
+    public String getCity() {
+        return city;
+    }
+
 }
