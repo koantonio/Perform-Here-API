@@ -12,4 +12,7 @@ public interface VotesRepository extends JpaRepository<Votes, Integer> {
 
     @Query("select v from Votes v where v.userId = ?1")
     List<Votes> findAllVotesByUser(String userId);
+
+    @Query("select v from Votes v where v.artistName = ?1")
+    List<Votes> findAllVotesForArtist(String artistName);
 }

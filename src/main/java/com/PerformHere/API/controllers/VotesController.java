@@ -22,9 +22,14 @@ public class VotesController {
         return this.votesService.getAllVotes();
     }
 
-    @GetMapping("{userId}")
+    @GetMapping("user/{userId}")
     public List<Votes> getVotesByUser(@PathVariable("userId") String userId) {
         return this.votesService.getAllVotesByUser(userId);
+    }
+
+    @GetMapping("artist/{artistName}")
+    public List<Votes> getVotesForArtist(@PathVariable("artistName") String artistName) {
+        return this.votesService.getAllVotesForArtist(artistName);
     }
 
     @PostMapping("add")
