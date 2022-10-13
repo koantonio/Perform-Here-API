@@ -23,6 +23,10 @@ public class VotesService {
         return this.votesRepository.findAllVotesByUser(userId);
     }
 
+    public List<Votes> getAllVotesForArtist(String artistName) {
+        return this.votesRepository.findAllVotesForArtist(artistName);
+    }
+
     public Votes saveVote(Votes vote) {
         return this.votesRepository.save(vote);
     }
