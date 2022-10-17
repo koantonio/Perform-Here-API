@@ -9,6 +9,7 @@ import javax.persistence.Id;
 public class Votes {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     Integer id;
     String userId;
     String artistName;
