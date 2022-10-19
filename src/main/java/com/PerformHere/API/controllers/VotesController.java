@@ -32,6 +32,11 @@ public class VotesController {
         return this.votesService.getAllVotesForArtist(artistName);
     }
 
+    @PutMapping("artist/update/{state}/{city}/{discountCode}")
+    public List<Votes> updateDiscountCodes(@PathVariable String state, @PathVariable String city, @PathVariable String discountCode) {
+        return this.votesService.updateVotesWithDiscountCode(state, city, discountCode);
+    }
+
     @PostMapping("add")
     public Votes saveVote(@RequestBody Votes vote) {
         return this.votesService.saveVote(vote);
