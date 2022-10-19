@@ -15,17 +15,19 @@ public class Votes {
     String artistName;
     String state;
     String city;
+    String discountCode;
 
     public Votes() {
 
     }
 
-    public Votes(Integer id, String userId, String artistName, String state, String city) {
+    public Votes(Integer id, String userId, String artistName, String state, String city, String discountCode) {
         this.id = id;
         this.userId = userId;
         this.artistName = artistName;
         this.state = state;
         this.city = city;
+        this.discountCode = discountCode;
     }
 
     public void setId(Integer id) {
@@ -48,6 +50,10 @@ public class Votes {
         this.city = city;
     }
 
+    public void setDiscountCode(String discountCode) {
+        this.discountCode = discountCode;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -66,6 +72,10 @@ public class Votes {
 
     public String getCity() {
         return city;
+    }
+
+    public String getDiscountCode() {
+        return discountCode;
     }
 
 }
