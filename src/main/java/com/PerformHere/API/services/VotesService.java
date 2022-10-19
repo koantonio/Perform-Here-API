@@ -31,14 +31,14 @@ public class VotesService {
         return this.votesRepository.save(vote);
     }
 
-    public List<Votes> updateVotesWithDiscountCode(String state, String city, String discountCode) {
-        List<Votes> votes = this.votesRepository.findAllVotesAtLocation(state, city);
+    public List<Votes> updateVotesWithDiscountCode(String artistName, String state, String city, String discountCode) {
+        List<Votes> votes = this.votesRepository.findAllVotesAtLocation(artistName, state, city);
         for(Votes v: votes) {
             Votes newVote = new Votes(v.getId(), v.getUserId(), v.getArtistName(), v.getState(), v.getCity(), discountCode);
             this.votesRepository.save(newVote);
         }
 
-        return this.votesRepository.findAllVotesAtLocation(state, city);
+        return this.votesRepository.findAllVotesAtLocation(artistName, state, city);
     }
 
 }
