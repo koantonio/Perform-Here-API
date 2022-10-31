@@ -35,4 +35,5 @@ public class PerfArtistControllerTest {
         );
         verify(perfArtistService, times(1)).getAllArtists();
     }
+
 }
