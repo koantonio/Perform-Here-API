@@ -48,7 +48,6 @@ public class PerfUserControllerTest {
         perfUser.setLastName("VanderWoodsen");
         mockMvc.perform(
                 MockMvcRequestBuilders.post("/perfUsers/add")
-                    .param("id",String.valueOf(perfUser.getId()))
                     .contentType(MediaType.APPLICATION_JSON)
                     .content(objectMapper.writeValueAsString(perfUser))
         );
