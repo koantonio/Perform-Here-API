@@ -22,6 +22,7 @@ public class PerfArtistController {
         return this.perfArtistService.getAllArtists();
     }
 
+
     @PostMapping("add")
     public PerfArtist saveArtist(@RequestBody PerfArtist artist) {
         return this.perfArtistService.saveArtist(artist);
